@@ -2,7 +2,14 @@ class UsersController < ApplicationController
   skip_before_action 
 
   def show
+    user = User.find(session[:user_id])
+    render json: user
   end
+
+  # ## this alternative method with @current_user as an instance variable is more interesting
+  # def show
+  #   render json: @current_user
+  # end
 
   def create
     user = User.create!(user_params)

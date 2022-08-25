@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2022_08_25_232058) do
     t.string "title"
     t.text "instructions"
     t.integer "minutes_to_complete"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
